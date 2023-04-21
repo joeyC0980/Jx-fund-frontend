@@ -10,13 +10,13 @@ const Header = (props) => {
       {/* this will hold our logo and nav bar */}
       <nav className="navBar ">
         <Link to="/about">
-          <div>Our Vision</div>
+          <div>OUR TEAM</div>
         </Link>
         <Link to='/blog'>
-          <div>Publications</div>
+          <div>BLOG</div>
         </Link>
         <Link to="/jxfunds">
-          <div>Funds</div>
+          <div>FUNDS</div>
         </Link>
         <Link to='/' className='logo'>
           <div className='logo'>JxFUNDS</div>
@@ -25,7 +25,7 @@ const Header = (props) => {
         <Search funds={funds} />
         </div>
         <Link to="/jxfunds/create">
-          <div> New Jx-Fund</div>
+          <div> FORM</div>
         </Link>
         <div className="dropDown">
            <button className="dropBtn">Account <span className="unicodeArrow">{`\u25BC`}</span></button>
