@@ -11,7 +11,7 @@ import Main from './components/Main';
 
 function App() {
   const [funds, setFunds] = useState(null);
-  const URL = process.env.REACT_APP_BACKEND_URL
+  const URI = process.env.REACT_APP_BACKEND_URI
 
   const getFunds = async () => {
     const response = await fetch(URL);
