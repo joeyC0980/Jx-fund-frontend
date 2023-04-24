@@ -68,8 +68,11 @@ input[type = search]{
   font-family:'Times New Roman', Times, serif;
   font-weight: bold;
   position: relative;
+  
+
 }
 .dropLinks{
+  display: none;
   font-size: 13px;
   position: absolute;
   background-color: rgb(79, 84, 88);

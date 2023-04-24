@@ -21,7 +21,7 @@ function App() {
     console.log(data.data);
   }
   useEffect(()=> {
-    console.log('Getting funds...')
+    // console.log('Getting funds...')
     getFunds()
   }, [])
   
