@@ -9,17 +9,32 @@ const Search = (props) => {
   const [query, setQuery] = useState('');
   const [items, setItems] = useState([]);
   const inputRef = useRef();
+
+  // const filteredItems = useMemo(() => {
+  //   return items.filter(
+  //     (item) =>
+  //       item.symbol && item.symbol.toLowerCase().includes(query.toLowerCase())
+  //   );
+  // }, [items, query]);
   const filteredItems = useMemo(() => {
-    return items.filter(
+    if (!items || !items.length || !props.funds) {
+      return [];
+    }
+    return props.funds.filter(
       (item) =>
         item.symbol && item.symbol.toLowerCase().includes(query.toLowerCase())
     );
-  }, [items, query]);
+  }, [items, query, props.funds]);
+  
+
+
   function onSubmit(e) {
     e.preventDefault();
     const filteredItems = props.funds.filter((item) => {
       return item.symbol && item.symbol.toLowerCase().includes(query.toLowerCase());
     });
+
+
     const value = inputRef.current.value;
     if (value === '') return;
     const selectedFund = filteredItems.find(
